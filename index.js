@@ -29,6 +29,25 @@ function power(base, exponent) {
 
 console.log(power(2, 2));
 
+function sumRange(num) {
+  if (num == 1) return 1;
+
+  return num + sumRange(num - 1);
+}
+
+var output = sumRange(3);
+console.log(output);
+
+function productOfArray(array) {
+  if (array.length === 0) return 1;
+
+  return array.shift() * productOfArray(array);
+}
+
+var sixty = productOfArray([1, 2, 3, 10]); // 60
+
+console.log(sixty);
+
 function fibonacci(n) {
   if (n == 1) {
     return 1;
