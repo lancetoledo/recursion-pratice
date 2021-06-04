@@ -38,13 +38,13 @@ function sumRange(num) {
 var output = sumRange(3);
 console.log(output);
 
-function productOfArray(array) {
-  if (array.length === 0) return 1;
+function sumOfArray(array) {
+  if (array.length === 0) return 0;
 
-  return array.shift() * productOfArray(array);
+  return array.shift() + sumOfArray(array);
 }
 
-var sixty = productOfArray([1, 2, 3, 10]); // 60
+var sixty = sumOfArray([1, 2, 3, 10]); // 60
 
 console.log(sixty);
 
