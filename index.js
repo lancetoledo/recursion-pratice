@@ -20,7 +20,8 @@ function factorial(x) {
 console.log(factorial(5));
 
 function power(base, exponent) {
-  if (exponent === 0) {
+  if (exponent == 1) return base;
+  else if (exponent === 0) {
     return 1;
   }
 
@@ -31,6 +32,7 @@ console.log(power(2, 2));
 
 function sumRange(num) {
   if (num == 1) return 1;
+  else if (num == 0) return 0;
 
   return num + sumRange(num - 1);
 }
